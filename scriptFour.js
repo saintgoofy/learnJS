@@ -1,9 +1,10 @@
 'use strict';
 
-let money = 50000,
+let money = prompt('Какой у вас месячный доход?'),
 income = 'Фриланс',
-addExpenses = 'бензин, коммунальные платежи, арендная плата за квартиру',
-deposit = true,
+addExpenses = prompt('Перечислите возможные расходы за расчитываемый период через запятую'),
+deposit = confirm('Есть ли у вас депозит в банке?'),
+mission = prompt('Сколько вы хотите заработать?'),
 period = 6;
 
 function showTypeOf (data){
@@ -15,13 +16,7 @@ showTypeOf (deposit);
 console.log(addExpenses.length);
 
 console.log('Период равен: ' + period + ' месяцев');
-
-let mission = prompt('Сколько вы хотите заработать?');
 console.log('Цель заработать ' + mission + ' рублей');
-
-money = prompt('Какой у вас месячный доход?');
-addExpenses = prompt('Перечислите возможные расходы за расчитываемый период через запятую');
-deposit = confirm('Есть ли у вас депозит в банке?');
 
 console.log(addExpenses.toLowerCase().split(', '));
 
@@ -30,6 +25,8 @@ let amount1 = prompt('Во сколько это обойдется?');
 
 let addExpenses2 = prompt('Введите обязательную статью расходов');
 let amount2 = prompt('Во сколько это обойдется?');
+
+console.log(addExpenses.toLowerCase().split(', '));
 
 let getExpensesMonth = function(){
     return Number(amount1) + Number(amount2);
