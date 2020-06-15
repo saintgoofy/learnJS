@@ -2,9 +2,12 @@
 
 let money = 50000, income = 'Фриланс', addExpenses = 'бензин, коммунальные платежи, арендная плата за квартиру', deposit = true;
 
-console.log(typeof money);
-console.log(typeof income);
-console.log(typeof deposit);
+function typeData (data){
+    console.log(typeof(data))
+}
+typeData (money);
+typeData (income);
+typeData (deposit);
 console.log(addExpenses.length);
 
 let mission = prompt('Сколько вы хотите заработать?');
@@ -41,3 +44,16 @@ if (budgetDay < 0 || budgetDay == 0){
 } else if(budgetDay < 1200 || budgetDay >= 600) {
         console.log('У вас средний уровень дохода');
 }
+
+function getExpensesMonth (expense1, expense2){
+    return Number(expense1) + Number(expense2);
+};
+
+console.log('Расходы за месяц равны: ' + getExpensesMonth(amount1, amount2));
+
+const accumulatedMonth = function getAccumulatedMonth (profit, callback){
+   return Number(profit) - Number(callback);
+}
+console.log('Накопления за месяц равны: ' + getAccumulatedMonth(money, getExpensesMonth));
+
+
