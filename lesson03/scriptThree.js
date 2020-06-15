@@ -1,6 +1,6 @@
 'use strict';
 
-let money = 50000, income = 5000, addExpenses = 'бензин, коммунальные платежи, арендная плата за квартиру', deposit = true;
+let money = 50000, income = 'Фриланс', addExpenses = 'бензин, коммунальные платежи, арендная плата за квартиру', deposit = true;
 
 console.log(typeof money);
 console.log(typeof income);
