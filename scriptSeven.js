@@ -89,11 +89,9 @@ if (appData.getTargetMonth() > 0){
 
 appData.getStatusIncome();
 
-function ourProgram(){
-    console.log('Наша программа включает в себя данные: ');
-    for(let key in appData){
-        console.log(key + ': ' + appData[key]);
-    }
+console.log('Наша программа включает в себя данные: ');
+for(const key in appData){
+    console.log(key + ': ' , appData[key]);
 }
 
-ourProgram();
+console.log(appData.expenses);
